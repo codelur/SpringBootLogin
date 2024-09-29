@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Welcome, <span th:text="${#authentication.name}"></span>!</h1>
+    <h2>Request Information</h2>
+    <p>Method: <span th:text="${method}"></span></p>
+    <p>Request URI: <span th:text="${requestURI}"></span></p>
+    <p>Query String: <span th:text="${queryString}"></span></p>
+    <form th:action="@{/request}" method="get">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+
+      <p th:if="${param.logout}" style="color: red">You just logged out!</p>
+    </form>
+    <a href="/logout">Logout</a>
+  </body>
+</html>
