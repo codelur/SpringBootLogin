@@ -22,7 +22,7 @@ public class ProfileController {
     public String saveProfile(HttpServletRequest request, Model model) {
         String method = request.getMethod();  // e.g., GET
          String requestURI = request.getRequestURI();  // e.g., /home
-         String queryString = request..getQueryString();
+         String queryString = request.getQueryString();
         return "addprofile";
     }
     

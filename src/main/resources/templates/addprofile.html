@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script th:src="@{/js/functions.js}" defer></script>
   </head>
   <body>
     <h1>Welcome, </span>!</h1>
     <h2>Request Information</h2>
-    <form th:action="@{/profile/save}" method="get">
+    <form th:action="@{/profile/save}" method="get" onsubmit="hashPassword()">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" th:value="${username}"
       required />
