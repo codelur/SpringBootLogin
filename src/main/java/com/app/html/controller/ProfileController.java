@@ -15,6 +15,7 @@ public class ProfileController {
     public String addProfile(HttpServletRequest request, Model model) {
         model.addAttribute("username", "User Sal");
          model.addAttribute("password", "Password");
+         model.addAttribute("error", "Not authenticated");
         return "addprofile";
     }
 
