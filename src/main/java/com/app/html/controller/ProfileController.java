@@ -16,6 +16,7 @@ public class ProfileController {
         model.addAttribute("username", "User Sal");
          model.addAttribute("password", "Password");
          model.addAttribute("error", "Not authenticated");
+         model.addAttribute("value", "Success!");
         return "addprofile";
     }
 
