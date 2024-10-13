@@ -1,12 +1,11 @@
 package com.app.html.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 
 @Controller
 @RequestMapping("/profile")
@@ -18,6 +17,8 @@ public class ProfileController {
          model.addAttribute("error", "Not authenticated");
          model.addAttribute("value", "Success!");
          model.addAttribute("message", "Log in complete.");
+         model.addAttribute("discount", "20");
+         model.addAttribute("membership", "Diamond");
         return "addprofile";
     }
 
