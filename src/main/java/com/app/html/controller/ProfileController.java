@@ -15,7 +15,10 @@ public class ProfileController {
         model.addAttribute("username", "User Sal");
          model.addAttribute("password", "Password");
          model.addAttribute("error", "Not authenticated");
-
+         model.addAttribute("value", "Customer");
+         model.addAttribute("discount", "20");
+         model.addAttribute("membership", "Platinum");
+         model.addAttribute("option", "2");
         return "addprofile";
     }
 
