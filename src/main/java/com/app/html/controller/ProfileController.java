@@ -15,8 +15,6 @@ public class ProfileController {
         model.addAttribute("username", "User Sal");
          model.addAttribute("password", "Password");
          model.addAttribute("error", "Not authenticated");
-         model.addAttribute("membership", "Gold");
-         model.addAttribute("level", "46");
         return "addprofile";
     }
 
